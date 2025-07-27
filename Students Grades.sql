@@ -8,34 +8,34 @@ CREATE TABLE students (
 
 -- Insert the data of first 10 students
 INSERT INTO students (ID, FirstName, LastName, Courses)
-VALUES ('11004', 'Mary', 'Dwellings', 'Nursing');
+VALUES (11004, 'Mary', 'Dwellings', 'Nursing');
 
 INSERT INTO students (ID, FirstName, LastName, Courses)
-VALUES ('11010', 'Johnathan', 'White', 'Computer Science');
+VALUES (11010, 'Johnathan', 'White', 'Computer Science');
 
 INSERT INTO students (ID, FirstName, LastName, Courses)
-VALUES ('11008', 'Naomi', 'Richards', 'Nursing');
+VALUES (11008, 'Naomi', 'Richards', 'Nursing');
 
 INSERT INTO students (ID, FirstName, LastName, Courses)
-VALUES ('11001', 'Libby', 'Benton', 'Architecture');
+VALUES (11001, 'Libby', 'Benton', 'Architecture');
 
 INSERT INTO students (ID, FirstName, LastName, Courses)
-VALUES ('11006', 'Scott', 'Petersen', 'Advertising Arts');
+VALUES (11006, 'Scott', 'Petersen', 'Advertising Arts');
 
 INSERT INTO students (ID, FirstName, LastName, Courses)
-VALUES ('11005', 'Evan', 'Graham', 'Fine Arts');
+VALUES (11005, 'Evan', 'Graham', 'Fine Arts');
 
 INSERT INTO students (ID, FirstName, LastName, Courses)
-VALUES ('11007', 'Aiden', 'Rasmussen', 'Computer Science');
+VALUES (11007, 'Aiden', 'Rasmussen', 'Computer Science');
 
 INSERT INTO students (ID, FirstName, LastName, Courses)
-VALUES ('11002', 'Lydia', 'Cooper', 'Advertising Arts');
+VALUES (11002, 'Lydia', 'Cooper', 'Advertising Arts');
 
 INSERT INTO students (ID, FirstName, LastName, Courses)
-VALUES ('11009', 'Cadence', 'Wells', 'Advertising Arts');
+VALUES (11009, 'Cadence', 'Wells', 'Advertising Arts');
 
 INSERT INTO students (ID, FirstName, LastName, Courses)
-VALUES ('11003', 'Scott', 'Dean', 'Computer Science');
+VALUES (11003, 'Scott', 'Dean', 'Computer Science');
 
 -- Create a table listing students' first and last names, and grades
 CREATE TABLE students_grades (
@@ -47,34 +47,34 @@ CREATE TABLE students_grades (
 
 -- Input data of first 10 students
 INSERT INTO students_grades (ID, FirstName, LastName, Grades)
-VALUES ('11004', 'Mary','Dwellings', '94.5');
+VALUES (11004, 'Mary','Dwellings', 94.5);
 
 INSERT INTO students_grades (ID, FirstName, LastName, Grades)
-VALUES ('11010', 'Johnathan','White', '90.1');
+VALUES (11010, 'Johnathan','White', 90.1);
 
 INSERT INTO students_grades (ID, FirstName, LastName, Grades)
-VALUES ('11008', 'Naomi','Richards','72.9');
+VALUES (11008, 'Naomi','Richards', 72.9);
 
 INSERT INTO students_grades (ID, FirstName, LastName, Grades)
-VALUES ('11001', 'Libby','Benton','98.7');
+VALUES (11001, 'Libby','Benton', 98.7);
 
 INSERT INTO students_grades (ID, FirstName, LastName, Grades)
-VALUES ('11006', 'Scott','Petersen','81.6');
+VALUES (11006, 'Scott','Petersen', 81.6);
 
 INSERT INTO students_grades (ID, FirstName, LastName, Grades)
-VALUES ('11005', 'Evan','Graham','89.0');
+VALUES (11005, 'Evan','Graham', 89.0);
 
 INSERT INTO students_grades (ID, FirstName, LastName, Grades)
-VALUES ('11007', 'Aiden','Rasmussen','93.9');
+VALUES (11007, 'Aiden','Rasmussen', 93.9);
 
 INSERT INTO students_grades (ID, FirstName, LastName, Grades)
-VALUES ('11002', 'Lydia','Cooper','78.1');
+VALUES (11002, 'Lydia','Cooper', 78.1);
 
 INSERT INTO students_grades (ID, FirstName, LastName, Grades)
-VALUES ('11009', 'Cadence','Wells','88.5');
+VALUES (11009, 'Cadence','Wells', 88.5);
 
 INSERT INTO students_grades (ID, FirstName, LastName, Grades)
-VALUES ('11003', 'Scott','Dean','73.7');
+VALUES (11003, 'Scott','Dean', 73.7);
 
 -- Select everything from the students table
 SELECT * 
