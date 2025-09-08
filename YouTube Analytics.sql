@@ -23,3 +23,6 @@ CREATE TABLE Performance_Metrics (
 ALTER TABLE Performance_Metrics
 ADD Comments_Count INT,
 ADD Shares INT;
+-- Check table above if correct
+
+-- Calculate the like-dislike ratio per video and show it
