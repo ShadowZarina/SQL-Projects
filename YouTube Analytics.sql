@@ -28,5 +28,10 @@ ADD Shares INT;
 ALTER TABLE Video_Info
 DROP COLUMN Channel_ID;
 
+-- Add 2 columns to the Performance_Metrics Table
+ALTER TABLE Video_Info
+ADD Category VARCHAR[50];
+
+
 
 -- Calculate the like-dislike ratio per video and show it
