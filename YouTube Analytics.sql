@@ -23,6 +23,10 @@ CREATE TABLE Performance_Metrics (
 ALTER TABLE Performance_Metrics
 ADD Comments_Count INT,
 ADD Shares INT;
--- Check table above if correct
+
+-- Remove column from Analytics table
+ALTER TABLE Video_Info
+DROP COLUMN Channel_ID;
+
 
 -- Calculate the like-dislike ratio per video and show it
