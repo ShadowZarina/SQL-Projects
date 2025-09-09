@@ -28,10 +28,12 @@ ADD Shares INT;
 ALTER TABLE Video_Info
 DROP COLUMN Channel_ID;
 
--- Add 2 columns to the Performance_Metrics Table
+-- Add 1 column to the Performance_Metrics Table
 ALTER TABLE Video_Info
 ADD Category VARCHAR[50];
 
-
+-- Insert values into Analytics table 
+INSERT INTO Video_Info (Video_ID, Title, Upload_Date, Duration_Seconds)
+VALUES ('1','Morning Yoga Routine','2025-09-09','600');
 
 -- Calculate the like-dislike ratio per video and show it
