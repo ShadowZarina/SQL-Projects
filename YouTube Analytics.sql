@@ -49,15 +49,15 @@ INSERT INTO Video_Info (Video_ID, Title, Upload_Date, Duration_Seconds, Category
 -- Insert values into Performance_Metrics table 
 INSERT INTO Performance_Metrics (Video_ID, Views, Watch_Time_Minutes, Avg_View_Duration_Seconds, Likes, Dislikes) VALUES 
 ('1','50000','2025-09-09','600','Health & Fitness'),
-('2','Top 10 Coding Tips','2025-09-11','720','Education'),
-('3','Travel Vlog in Shibuya, Japan','2025-09-14','900','Travel'),
-('4','Minimalistic DIY Room Decor','2025-09-14','480','Lifestyle'),
-('5','Valorant Gaming Montage','2025-09-15','1080','Gaming'),
-('6','History of Rome Explained','2025-09-17','1200','Education'),
-('7','Street Food in Manila','2025-09-19','540','Food'),
-('8','Music Cover of Hello by Adele','2025-09-23','210','Music'),
-('9','25 Productivity Hacks for 2025','2025-09-26','660','Lifestyle'),
-('10','Movie Review: Dune 2','2025-09-27','780','Entertainment');
+('2','72000','2025-09-11','720','Education'),
+('3','95000','2025-09-14','900','Travel'),
+('4','30000','2025-09-14','480','Lifestyle'),
+('5','150000','2025-09-15','1080','Gaming'),
+('6','40000','2025-09-17','1200','Education'),
+('7','80000','2025-09-19','540','Food'),
+('8','20000','2025-09-23','210','Music'),
+('9','55000','2025-09-26','660','Lifestyle'),
+('10','68000','2025-09-27','780','Entertainment');
 
 -- Calculate the like-dislike ratio per video and show it
 
