@@ -48,16 +48,16 @@ INSERT INTO Video_Info (Video_ID, Title, Upload_Date, Duration_Seconds, Category
 
 -- Insert values into Performance_Metrics table 
 INSERT INTO Performance_Metrics (Video_ID, Views, Watch_Time_Minutes, Avg_View_Duration_Seconds, Likes, Dislikes) VALUES 
-('1','50000','2025-09-09','600','Health & Fitness'),
-('2','72000','2025-09-11','720','Education'),
-('3','95000','2025-09-14','900','Travel'),
-('4','30000','2025-09-14','480','Lifestyle'),
-('5','150000','2025-09-15','1080','Gaming'),
-('6','40000','2025-09-17','1200','Education'),
-('7','80000','2025-09-19','540','Food'),
-('8','20000','2025-09-23','210','Music'),
-('9','55000','2025-09-26','660','Lifestyle'),
-('10','68000','2025-09-27','780','Entertainment');
+('1','50000','8200','600','Health & Fitness'),
+('2','72000','11400','720','Education'),
+('3','95000','15700','900','Travel'),
+('4','30000','4800','480','Lifestyle'),
+('5','150000','28000','1080','Gaming'),
+('6','40000','6300','1200','Education'),
+('7','80000','13400','540','Food'),
+('8','20000','2500','210','Music'),
+('9','55000','9000','660','Lifestyle'),
+('10','68000','12100','780','Entertainment');
 
 -- Calculate the like-dislike ratio per video and show it
 
