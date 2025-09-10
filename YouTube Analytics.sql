@@ -12,9 +12,10 @@ EXEC sp_rename 'Analytics', 'Video_Info';
 
 -- Create another table named Performance_Metrics
 CREATE TABLE Performance_Metrics (
-    Views INT PRIMARY KEY,
+    Video_ID INT PRIMARY KEY,
+    Views INT NOT NULL,
     Watch_Time_Minutes FLOAT NOT NULL,
-    avg_view_duration_seconds FLOAT,
+    Avg_View_Duration_Seconds FLOAT,
     Likes INT NOT NULL,
     Dislikes INT NOT NULL
 );
@@ -59,3 +60,12 @@ INSERT INTO Video_Info (Video_ID, Title, Upload_Date, Duration_Seconds, Category
 ('10','Movie Review: Dune 2','2025-09-27','780','Entertainment');
 
 -- Calculate the like-dislike ratio per video and show it
+
+-- Add another table named Audience
+CREATE TABLE Audience (
+    Video_ID INT PRIMARY KEY,
+    Subscribers_Gained INT,
+    Subscribers_Lost INT,
+    Audience_Retention_Rate INT,
+    Click_Through_Rate INT
+);
