@@ -47,8 +47,8 @@ INSERT INTO Video_Info (Video_ID, Title, Upload_Date, Duration_Seconds, Category
 ('10','Movie Review: Dune 2','2025-09-27','780','Entertainment');
 
 -- Insert values into Performance_Metrics table 
-INSERT INTO Video_Info (Video_ID, Title, Upload_Date, Duration_Seconds, Category) VALUES 
-('1','10 Minute Morning Yoga Routine','2025-09-09','600','Health & Fitness'),
+INSERT INTO Performance_Metrics (Video_ID, Views, Watch_Time_Minutes, Avg_View_Duration_Seconds, Likes, Dislikes) VALUES 
+('1','50000','2025-09-09','600','Health & Fitness'),
 ('2','Top 10 Coding Tips','2025-09-11','720','Education'),
 ('3','Travel Vlog in Shibuya, Japan','2025-09-14','900','Travel'),
 ('4','Minimalistic DIY Room Decor','2025-09-14','480','Lifestyle'),
