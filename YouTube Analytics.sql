@@ -111,13 +111,13 @@ FROM Orders o
 JOIN Revenue r ON o.Order_ID = r.Order_ID
 GROUP BY o.Customer_ID;
 
--- Find the 2 most frequent customers in Orders
-SELECT TOP 2 
-    Customer_ID, 
-    COUNT(*) AS Order_Count
-FROM Orders
-GROUP BY Customer_ID
-ORDER BY Order_Count DESC
+-- Find the top 5 videos with the highest number of views
+SELECT TOP 5
+    Video_ID, 
+    COUNT(*) AS Video_Count
+FROM Performance_Metrics
+GROUP BY Video_ID
+ORDER BY Views DESC
 
 -- Show all purchases made by Customer ID 144629
 SELECT *
