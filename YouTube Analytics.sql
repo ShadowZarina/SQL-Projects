@@ -101,11 +101,11 @@ JOIN Performance_Metrics p
 
 -- Update the Video_Info table to add a new video
 INSERT INTO Video_Info (Video_ID, Title, Upload_Date, Duration_Seconds, Category) VALUES 
-('1','10 Minute Morning Yoga Routine','2025-09-09','600','Health & Fitness');
+('1','---','2025-09-14','510','Lifestyle');
 
 -- Update the Performance_Metrics table to add a new value
 INSERT INTO Performance_Metrics (Video_ID, Views, Watch_Time_Minutes, Avg_View_Duration_Seconds, Likes, Dislikes) VALUES 
-('1','50000','8200','590','3500','120');
+('1','87000','7500','550','3800','490');
 
 -- Update the Audience table to add a new value
 INSERT INTO Performance_Metrics (Video_ID, Views, Watch_Time_Minutes, Avg_View_Duration_Seconds, Likes, Dislikes) VALUES 
@@ -180,3 +180,6 @@ SELECT
 FROM Orders o
 JOIN Revenue r ON o.Order_ID = r.Order_ID
 ORDER BY r.Total_Amount DESC;
+
+-- Show all videos in ascending views-to-watch duration ratio
+...
