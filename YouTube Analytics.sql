@@ -70,14 +70,14 @@ CREATE TABLE Audience (
     Click_Through_Rate INT
 );
 
--- Select everything from the Orders table
+-- Select everything from the Video_Info table
 SELECT * 
-FROM Orders;
+FROM Video_Info;
 
--- Arrange all purchases by Customer ID number
+-- Arrange all videos in Video_Info by alphabetical order
 SELECT *
 FROM Orders
-ORDER BY ID ASC;
+ORDER BY Title ASC;
 
 -- Select everything from the Revenue table
 SELECT * 
