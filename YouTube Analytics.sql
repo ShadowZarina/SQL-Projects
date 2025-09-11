@@ -2,7 +2,6 @@
 CREATE TABLE Analytics (
     Video_ID INT PRIMARY KEY,
     Title VARCHAR(50) NOT NULL,
-    Channel_ID INT NOT NULL,
     Upload_Date DATE NOT NULL,
     Duration_Seconds INT
 );
@@ -83,18 +82,12 @@ ORDER BY Title ASC;
 SELECT * 
 FROM Performance_Metrics;
 
--- List all orders and the revenue gained together
+-- List all details in the Video_Info table combined with the views, likes and dislikes from Performance_Metrics
 SELECT 
-    o.Order_ID, 
-    o.Customer_ID, 
-    o.Order_Date, 
-    o.Product, 
-    o.Quantity, 
-    o.Unit_Price, 
-    r.Total_Amount
-FROM Orders o
-JOIN Revenue r
-    ON o.Order_ID = r.Order_ID
+    
+FROM Video_Info v
+JOIN Performance_Metrics p
+    ON v.Video_ID = p.Video_ID
 
 -- Update the tables to add a new customer purchase
 INSERT INTO Orders (Order_ID, Customer_ID, Order_Date, Product, Quantity, Unit_Price) VALUES 
