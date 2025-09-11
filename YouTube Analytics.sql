@@ -127,10 +127,10 @@ FROM Performance_Metrics
 GROUP BY Video_ID
 ORDER BY Views DESC
 
--- Show all purchases made by Customer ID 144629
+-- Show all videos made on September 14, 2025
 SELECT *
-FROM Orders
-WHERE Customer_ID = 144629;
+FROM Video_Info
+WHERE Upload_Date = '2025-09-14'
 
 -- List down the total revenue by day
 SELECT 
