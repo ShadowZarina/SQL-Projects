@@ -95,12 +95,13 @@ FROM Video_Info v
 JOIN Performance_Metrics p
     ON v.Video_ID = p.Video_ID
 
--- Update the tables to add a new customer purchase
-INSERT INTO Orders (Order_ID, Customer_ID, Order_Date, Product, Quantity, Unit_Price) VALUES 
-(11, 144629, '2025-07-07', 'Bluetooth Keyboard', 1, 35.00);
+-- Update the Video_Info table to add a new video
+INSERT INTO Video_Info (Video_ID, Title, Upload_Date, Duration_Seconds, Category) VALUES 
+('1','10 Minute Morning Yoga Routine','2025-09-09','600','Health & Fitness');
 
-INSERT INTO Revenue (Order_ID, Total_Amount) VALUES 
-(11, 35.00);
+-- Update the Performance_Metrics table to add a new value
+INSERT INTO Performance_Metrics (Video_ID, Views, Watch_Time_Minutes, Avg_View_Duration_Seconds, Likes, Dislikes) VALUES 
+('1','50000','8200','590','3500','120');
 
 -- List down the total revenue per customer
 SELECT 
