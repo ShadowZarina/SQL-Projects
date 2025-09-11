@@ -79,9 +79,9 @@ SELECT *
 FROM Orders
 ORDER BY Title ASC;
 
--- Select everything from the Revenue table
+-- Select everything from the Performance_Metrics table
 SELECT * 
-FROM Revenue;
+FROM Performance_Metrics;
 
 -- List all orders and the revenue gained together
 SELECT 
