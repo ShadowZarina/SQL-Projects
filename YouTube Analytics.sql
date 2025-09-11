@@ -69,6 +69,10 @@ CREATE TABLE Audience (
     Click_Through_Rate INT
 );
 
+-- Insert values into Audience table 
+INSERT INTO Audience (Video_ID, Subscribers_Gained, Subscribers_Lost, Audience_Retention_Rate, Click_Through_Rate) VALUES 
+('1', ...),
+    
 -- Select everything from the Video_Info table
 SELECT * 
 FROM Video_Info;
@@ -100,6 +104,10 @@ INSERT INTO Video_Info (Video_ID, Title, Upload_Date, Duration_Seconds, Category
 ('1','10 Minute Morning Yoga Routine','2025-09-09','600','Health & Fitness');
 
 -- Update the Performance_Metrics table to add a new value
+INSERT INTO Performance_Metrics (Video_ID, Views, Watch_Time_Minutes, Avg_View_Duration_Seconds, Likes, Dislikes) VALUES 
+('1','50000','8200','590','3500','120');
+
+-- Update the Audience table to add a new value
 INSERT INTO Performance_Metrics (Video_ID, Views, Watch_Time_Minutes, Avg_View_Duration_Seconds, Likes, Dislikes) VALUES 
 ('1','50000','8200','590','3500','120');
 
