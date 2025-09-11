@@ -84,7 +84,13 @@ FROM Performance_Metrics;
 
 -- List all details in the Video_Info table combined with the views, likes and dislikes from Performance_Metrics
 SELECT 
-    
+    v.Video_ID,
+    v.Title,
+    v.Upload_Date,
+    v.Duration_Seconds,
+    p.Views,
+    p.Likes,
+    p.Dislikes
 FROM Video_Info v
 JOIN Performance_Metrics p
     ON v.Video_ID = p.Video_ID
