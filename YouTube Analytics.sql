@@ -141,14 +141,14 @@ FROM Video_Info v
 JOIN Audience a
     ON v.Video_ID = a.Video_ID
 
--- Find the top 5 videos
+-- Find the top 5 videos based on number of likes
     ...
-SELECT 
-    Product, 
-    SUM(Quantity) AS Total_Quantity
-FROM Orders
-GROUP BY Product
-ORDER BY Total_Quantity DESC;
+SELECT TOP 5
+    Video_ID, 
+    COUNT(*) AS Video_Count
+FROM Performance_Metrics
+GROUP BY Performanc_Metrics
+ORDER BY Likes DESC;
 
 -- Create view of all videos in descending amount of views
 ...
