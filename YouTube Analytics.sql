@@ -183,3 +183,10 @@ ORDER BY r.Total_Amount DESC;
 
 -- Show all videos in ascending views-to-watch duration ratio
 ...
+SELECT expression_1 / expression_2 AS result_of_division
+FROM your_table;
+
+SELECT x DIV y AS integer_quotient
+FROM your_table;
+
+SELECT 10 DIV 4; -- Result: 2
