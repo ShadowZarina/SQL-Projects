@@ -71,7 +71,7 @@ CREATE TABLE Audience (
 
 -- Insert values into Audience table 
 INSERT INTO Audience (Video_ID, Subscribers_Gained, Subscribers_Lost, Audience_Retention_Rate, Click_Through_Rate) VALUES 
-('1', ...),
+('1', '115', '6', '37.7%', '49%'),
     
 -- Select everything from the Video_Info table
 SELECT * 
