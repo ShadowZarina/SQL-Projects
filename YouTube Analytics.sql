@@ -168,6 +168,8 @@ ORDER BY p.Views DESC;
 
 -- Create a view of all videos in descending like-dislike ratios
 CREATE VIEW Videos_By_Like_Dislike_Ratios AS
+SELECT Likes / Dislikes AS LTD_Ratio
+FROM Performance_Metrics;
     ...
 SELECT 
     o.Order_ID,
