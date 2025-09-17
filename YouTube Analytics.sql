@@ -192,5 +192,8 @@ SELECT
     p.Views,
     p.Watch_Time_Minutes
     p.Views / p.Watch_Time_Minutes AS VTW_Ratio
-FROM Performance_Metrics p
+FROM Video_Info v
+JOIN Performance_Metrics p
+ON v.Video_ID = p.Video_ID
+ORDER BY VTW_Ratio DESC;
 
