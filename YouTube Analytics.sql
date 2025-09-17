@@ -168,20 +168,20 @@ ORDER BY p.Views DESC;
 
 -- Create a view of all videos in descending like-dislike ratios
 CREATE VIEW Videos_By_Like_Dislike_Ratios AS
-SELECT Likes / Dislikes AS LTD_Ratio
-FROM Performance_Metrics;
-    ...
+
 SELECT 
-    o.Order_ID,
-    o.Customer_ID,
-    o.Order_Date,
-    o.Product,
-    o.Quantity,
-    o.Unit_Price,
-    r.Total_Amount
-FROM Orders o
-JOIN Revenue r ON o.Order_ID = r.Order_ID
-ORDER BY r.Total_Amount DESC;
+    v.Video_ID,
+    v.Title,
+    v.Upload_Date,
+    v.Duration_Seconds,
+    p.Views,
+    p.Likes,
+    p.Dislikes
+    p.Likes / p.Dislikes AS LTD_Ratio
+FROM Video_Info v
+JOIN Performance_Metrics p
+ON v.Video_ID = p.Video_ID
+ORDER BY LTD_Ratio DESC;
 
 -- Show all videos in ascending views-to-watch duration ratio
 ...
