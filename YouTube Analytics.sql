@@ -35,29 +35,29 @@ ADD Category VARCHAR(50);
 
 -- Insert values into Video_Info table 
 INSERT INTO Video_Info (Video_ID, Title, Upload_Date, Duration_Seconds, Category) VALUES 
-('1','10 Minute Morning Yoga Routine','2025-09-09','600','Health & Fitness'),
-('2','Top 10 Coding Tips','2025-09-11','720','Education'),
-('3','Travel Vlog in Shibuya, Japan','2025-09-14','900','Travel'),
-('4','Minimalistic DIY Room Decor','2025-09-14','480','Lifestyle'),
-('5','Valorant Gaming Montage','2025-09-15','1080','Gaming'),
-('6','History of Rome Explained','2025-09-17','1200','Education'),
-('7','Street Food in Manila','2025-09-19','540','Food'),
-('8','Music Cover of Hello by Adele','2025-09-23','210','Music'),
-('9','25 Productivity Hacks for 2025','2025-09-26','660','Lifestyle'),
-('10','Movie Review: Dune 2','2025-09-27','780','Entertainment');
+(1,'10 Minute Morning Yoga Routine','2025-09-09',600,'Health & Fitness'),
+(2,'Top 10 Coding Tips','2025-09-11',720,'Education'),
+(3,'Travel Vlog in Shibuya, Japan','2025-09-14',900,'Travel'),
+(4,'Minimalistic DIY Room Decor','2025-09-14',480,'Lifestyle'),
+(5,'Valorant Gaming Montage','2025-09-15',1080,'Gaming'),
+(6,'History of Rome Explained','2025-09-17',1200,'Education'),
+(7,'Street Food in Manila','2025-09-19',540,'Food'),
+(8,'Music Cover of Hello by Adele','2025-09-23',210,'Music'),
+(9,'25 Productivity Hacks for 2025','2025-09-26',660,'Lifestyle'),
+(10,'Movie Review: Dune 2','2025-09-27',780,'Entertainment');
 
 -- Insert values into Performance_Metrics table 
 INSERT INTO Performance_Metrics (Video_ID, Views, Watch_Time_Minutes, Avg_View_Duration_Seconds, Likes, Dislikes) VALUES 
-('1','50000','8200','590','3500','120'),
-('2','72000','11400','570','4200','180'),
-('3','95000','15700','595','6800','210'),
-('4','30000','4800','580','2100','60'),
-('5','150000','28000','660','12000','500'),
-('6','40000','6300','550','3300','100'),
-('7','80000','13400','600','5600','160'),
-('8','20000','2500','450','1800','50'),
-('9','55000','9000','500','4100','90'),
-('10','68000','12100','640','5500','230');
+(1,50000,8200,590,3500,120),
+(2,72000,11400,570,4200,180),
+(3,95000,15700,595,6800,210),
+(4,30000,4800,580,2100,60),
+(5,150000,28000,660,12000,500),
+(6,40000,6300,550,3300,100),
+(7,80000,13400,600,5600,160),
+(8,20000,2500,450,1800,50),
+(9,55000,9000,500,4100,90),
+(10,68000,12100,640,5500,230);
 
 -- Calculate the like-dislike ratio per video and show it
 
@@ -72,17 +72,16 @@ CREATE TABLE Audience (
 
 -- Insert values into Audience table 
 INSERT INTO Audience (Video_ID, Subscribers_Gained, Subscribers_Lost, Audience_Retention_Rate, Click_Through_Rate) VALUES 
-('1', '115', '6', '37.7', '49'),
-('2', '240', '15', '42.3', '55'),
-('3', '310', '12', '48.9', '61'),
-('4', '95', '4', '33.5', '47'),
-('5', '520', '25', '51.2', '63'),
-('6', '180', '10', '39.1', '50'),
-('7', '270', '8', '45.7', '58'),
-('8', '75', '3', '29.4', '44'),
-('9', '210', '9', '41.8', '52'),
-('10', '260', '14', '46.5', '59')
-
+(1, 115, 6, 37.7, 49),
+(2, 240, 15, 42.3, 55),
+(3, 310, 12, 48.9, 61),
+(4, 95, 4, 33.5, 47),
+(5, 520, 25, 51.2, 63),
+(6, 180, 10, 39.1, 50),
+(7, 270, 8, 45.7, 58),
+(8, 75, 3, 29.4, 44),
+(9, 210, 9, 41.8, 52),
+(10, 260, 14, 46.5, 59);
     
 -- Select everything from the Video_Info table
 SELECT * 
