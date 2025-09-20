@@ -111,15 +111,15 @@ JOIN Performance_Metrics p
 
 -- Update the Video_Info table to add a new video
 INSERT INTO Video_Info (Video_ID, Title, Upload_Date, Duration_Seconds, Category) VALUES 
-('11','---','2025-09-14','510','Lifestyle');
+(11, 'The Optimal Daily Diet','2025-09-14',510,'Lifestyle');
 
 -- Update the Performance_Metrics table to add a new value
 INSERT INTO Performance_Metrics (Video_ID, Views, Watch_Time_Minutes, Avg_View_Duration_Seconds, Likes, Dislikes) VALUES 
-('11','87000','7500','550','3800','490');
+(11,87000,7500,550,3800,490);
 
 -- Update the Audience table to add a new value
 INSERT INTO Audience (Video_ID, Subscribers_Gained, Subscribers_Lost, Audience_Retention_Rate, Click_Through_Rate) VALUES 
-('11','50000','8200','590','3500','120');
+(11,500,80,590,40.3,50);
 
 -- Find the top 5 videos with the highest number of views
 SELECT TOP 5
@@ -147,9 +147,9 @@ SELECT
     a.Subscribers_Gained,
     a.Subscribers_Lost
 FROM Video_Info v
-WHERE Category = 'Lifestyle'
 JOIN Audience a
     ON v.Video_ID = a.Video_ID
+WHERE Category = 'Lifestyle'
 
 -- Find the top 5 videos based on number of likes
     ...
