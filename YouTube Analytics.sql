@@ -3,7 +3,8 @@ CREATE TABLE Analytics (
     Video_ID INT PRIMARY KEY,
     Title VARCHAR(50) NOT NULL,
     Upload_Date DATE NOT NULL,
-    Duration_Seconds INT
+    Duration_Seconds INT,
+    Duration_Minutes INT
 );
 
 -- Rename table Analytics to Video_Info
@@ -24,13 +25,13 @@ ALTER TABLE Performance_Metrics
 ADD Comments_Count INT,
 ADD Shares INT;
 
--- Remove column from Analytics table
+-- Remove column from Video_Info table
 ALTER TABLE Video_Info
-DROP COLUMN Channel_ID;
+DROP COLUMN Duration_Minutes;
 
 -- Add 1 column to the Performance_Metrics Table
 ALTER TABLE Video_Info
-ADD Category VARCHAR[50];
+ADD Category VARCHAR(50);
 
 -- Insert values into Video_Info table 
 INSERT INTO Video_Info (Video_ID, Title, Upload_Date, Duration_Seconds, Category) VALUES 
@@ -71,7 +72,17 @@ CREATE TABLE Audience (
 
 -- Insert values into Audience table 
 INSERT INTO Audience (Video_ID, Subscribers_Gained, Subscribers_Lost, Audience_Retention_Rate, Click_Through_Rate) VALUES 
-('1', '115', '6', '37.7%', '49%'),
+('1', '115', '6', '37.7', '49'),
+('2', '240', '15', '42.3', '55'),
+('3', '310', '12', '48.9', '61'),
+('4', '95', '4', '33.5', '47'),
+('5', '520', '25', '51.2', '63'),
+('6', '180', '10', '39.1', '50'),
+('7', '270', '8', '45.7', '58'),
+('8', '75', '3', '29.4', '44'),
+('9', '210', '9', '41.8', '52'),
+('10', '260', '14', '46.5', '59')
+
     
 -- Select everything from the Video_Info table
 SELECT * 
@@ -101,15 +112,15 @@ JOIN Performance_Metrics p
 
 -- Update the Video_Info table to add a new video
 INSERT INTO Video_Info (Video_ID, Title, Upload_Date, Duration_Seconds, Category) VALUES 
-('1','---','2025-09-14','510','Lifestyle');
+('11','---','2025-09-14','510','Lifestyle');
 
 -- Update the Performance_Metrics table to add a new value
 INSERT INTO Performance_Metrics (Video_ID, Views, Watch_Time_Minutes, Avg_View_Duration_Seconds, Likes, Dislikes) VALUES 
-('1','87000','7500','550','3800','490');
+('11','87000','7500','550','3800','490');
 
 -- Update the Audience table to add a new value
-INSERT INTO Performance_Metrics (Video_ID, Views, Watch_Time_Minutes, Avg_View_Duration_Seconds, Likes, Dislikes) VALUES 
-('1','50000','8200','590','3500','120');
+INSERT INTO Audience (Video_ID, Views, Watch_Time_Minutes, Avg_View_Duration_Seconds, Likes, Dislikes) VALUES 
+('11','50000','8200','590','3500','120');
 
 -- Find the top 5 videos with the highest number of views
 SELECT TOP 5
@@ -147,7 +158,7 @@ SELECT TOP 5
     Video_ID, 
     COUNT(*) AS Video_Count
 FROM Performance_Metrics
-GROUP BY Performanc_Metrics
+GROUP BY Video_ID
 ORDER BY Likes DESC;
 
 -- Create view of all videos in descending amount of views
@@ -175,7 +186,7 @@ SELECT
     v.Duration_Seconds,
     p.Views,
     p.Likes,
-    p.Dislikes
+    p.Dislikes,
     p.Likes / p.Dislikes AS LTD_Ratio
 FROM Video_Info v
 JOIN Performance_Metrics p
@@ -190,7 +201,7 @@ SELECT
     v.Upload_Date,
     v.Duration_Seconds,
     p.Views,
-    p.Watch_Time_Minutes
+    p.Watch_Time_Minutes,
     p.Views / p.Watch_Time_Minutes AS VTW_Ratio
 FROM Video_Info v
 JOIN Performance_Metrics p
