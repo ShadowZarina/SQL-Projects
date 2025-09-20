@@ -66,22 +66,22 @@ CREATE TABLE Audience (
     Video_ID INT PRIMARY KEY,
     Subscribers_Gained INT,
     Subscribers_Lost INT,
-    Audience_Retention_Rate INT,
-    Click_Through_Rate INT
+    Audience_Retention_Rate DECIMAL(3,1),
+    Click_Through_Rate DECIMAL(3,1)
 );
 
 -- Insert values into Audience table 
 INSERT INTO Audience (Video_ID, Subscribers_Gained, Subscribers_Lost, Audience_Retention_Rate, Click_Through_Rate) VALUES 
-(1, 115, 6, 37.7, 49),
-(2, 240, 15, 42.3, 55),
-(3, 310, 12, 48.9, 61),
-(4, 95, 4, 33.5, 47),
-(5, 520, 25, 51.2, 63),
-(6, 180, 10, 39.1, 50),
-(7, 270, 8, 45.7, 58),
-(8, 75, 3, 29.4, 44),
-(9, 210, 9, 41.8, 52),
-(10, 260, 14, 46.5, 59);
+(1, 115, 6, 37.7, 49.4),
+(2, 240, 15, 42.3, 55.1),
+(3, 310, 12, 48.9, 61.0),
+(4, 95, 4, 33.5, 47.9),
+(5, 520, 25, 51.2, 63.2),
+(6, 180, 10, 39.1, 50.3),
+(7, 270, 8, 45.7, 58.3),
+(8, 75, 3, 29.4, 44.2),
+(9, 210, 9, 41.8, 52.0),
+(10, 260, 14, 46.5, 59.9);
     
 -- Select everything from the Video_Info table
 SELECT * 
